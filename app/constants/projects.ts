@@ -38,7 +38,7 @@ const projects: Project[] = [
       'Dual-role functionality: Book spaces as guest or list as host',
       'Secure payment integration with transaction history',
       'Advanced search and filtering by location, amenities, and price',
-      'Responsive design optimized for mobile and desktop users'
+      'Responsive design optimized for mobile and desktop users',
     ],
   },
   {
@@ -66,7 +66,7 @@ const projects: Project[] = [
       'Custom dataset creation and annotation with Roboflow',
       'High accuracy detection with optimized computer vision algorithms',
       'Live webcam integration for instant gesture recognition',
-      'Educational tool for learning American Sign Language'
+      'Educational tool for learning American Sign Language',
     ],
   },
   {
@@ -87,7 +87,7 @@ const projects: Project[] = [
       'Real-time transaction processing and instant notifications',
       'Digital wallet management with multiple account support',
       'Comprehensive transaction history and financial analytics',
-      'Cross-platform mobile app with native performance'
+      'Cross-platform mobile app with native performance',
     ],
   },
   {
@@ -116,7 +116,7 @@ const projects: Project[] = [
       'University-specific knowledge base for campus information',
       'Persistent conversation history and context awareness',
       'Real-time chat interface with typing indicators',
-      'Academic inquiry support for students and faculty'
+      'Academic inquiry support for students and faculty',
     ],
   },
   {
@@ -145,7 +145,7 @@ const projects: Project[] = [
       'STI College-specific information and student services',
       'Context-aware responses with conversation memory',
       'Modern chat interface with smooth animations',
-      'Administrative support for enrollment and academic queries'
+      'Administrative support for enrollment and academic queries',
     ],
   },
   {
@@ -166,7 +166,7 @@ const projects: Project[] = [
       'Real-time patient flow visualization and analytics',
       'Statistical analysis of wait times and resource utilization',
       'Educational tool for healthcare management concepts',
-      'Dynamic animations showing patient movement and triage'
+      'Dynamic animations showing patient movement and triage',
     ],
   },
 ];

@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowLeft, FolderOpen, Github, Eye, Grid, List } from 'lucide-react';
 import Link from 'next/link';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import PageTransition from '../components/ui/PageTransition';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 import projects, { Project } from '../constants/projects';
@@ -25,7 +25,7 @@ const ProjectsPage = () => {
     window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   // Create image mapping for projects
-  const projectImages: { [key: number]: any } = {
+  const projectImages: { [key: number]: string | StaticImageData } = {
     1: openspaceImg,
     2: aslImg,
     3: pitakaImg,

@@ -9,6 +9,7 @@ export interface Project {
   category?: 'web' | 'ai' | 'mobile' | 'other';
   image?: string;
   longDescription?: string;
+  keyFeatures?: string[];
 }
 
 const projects: Project[] = [
@@ -32,6 +33,13 @@ const projects: Project[] = [
     featured: true,
     category: 'web',
     image: '/assets/projects/openspace.png',
+    keyFeatures: [
+      'Real-time room availability checking and booking system',
+      'Dual-role functionality: Book spaces as guest or list as host',
+      'Secure payment integration with transaction history',
+      'Advanced search and filtering by location, amenities, and price',
+      'Responsive design optimized for mobile and desktop users'
+    ],
   },
   {
     id: 2,
@@ -53,6 +61,13 @@ const projects: Project[] = [
     featured: true,
     category: 'ai',
     image: '/assets/projects/asl.png',
+    keyFeatures: [
+      'Real-time ASL alphabet recognition using YOLOv11 architecture',
+      'Custom dataset creation and annotation with Roboflow',
+      'High accuracy detection with optimized computer vision algorithms',
+      'Live webcam integration for instant gesture recognition',
+      'Educational tool for learning American Sign Language'
+    ],
   },
   {
     id: 3,
@@ -67,6 +82,13 @@ const projects: Project[] = [
     featured: true,
     category: 'mobile',
     image: '/assets/projects/pitaka.jpg',
+    keyFeatures: [
+      'Secure biometric authentication and PIN protection',
+      'Real-time transaction processing and instant notifications',
+      'Digital wallet management with multiple account support',
+      'Comprehensive transaction history and financial analytics',
+      'Cross-platform mobile app with native performance'
+    ],
   },
   {
     id: 4,
@@ -89,6 +111,13 @@ const projects: Project[] = [
     featured: false,
     category: 'ai',
     image: '/assets/projects/perpsbot.png',
+    keyFeatures: [
+      'AI-powered responses using Google Gemini API',
+      'University-specific knowledge base for campus information',
+      'Persistent conversation history and context awareness',
+      'Real-time chat interface with typing indicators',
+      'Academic inquiry support for students and faculty'
+    ],
   },
   {
     id: 5,
@@ -100,6 +129,7 @@ const projects: Project[] = [
     techStack: [
       'TypeScript',
       'React',
+      'Gemini API',
       'Tailwind CSS',
       'Express',
       'MongoDB',
@@ -110,6 +140,13 @@ const projects: Project[] = [
     featured: false,
     category: 'ai',
     image: '/assets/projects/stievebot.png',
+    keyFeatures: [
+      'Intelligent conversational AI with natural language processing',
+      'STI College-specific information and student services',
+      'Context-aware responses with conversation memory',
+      'Modern chat interface with smooth animations',
+      'Administrative support for enrollment and academic queries'
+    ],
   },
   {
     id: 6,
@@ -124,6 +161,13 @@ const projects: Project[] = [
     featured: false,
     category: 'web',
     image: '/assets/projects/hospitaler.png',
+    keyFeatures: [
+      'Interactive emergency room simulation using queuing theory',
+      'Real-time patient flow visualization and analytics',
+      'Statistical analysis of wait times and resource utilization',
+      'Educational tool for healthcare management concepts',
+      'Dynamic animations showing patient movement and triage'
+    ],
   },
 ];
 

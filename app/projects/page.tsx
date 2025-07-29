@@ -6,6 +6,7 @@ import { ArrowLeft, FolderOpen, Github, Eye, Grid, List } from 'lucide-react';
 import Link from 'next/link';
 import Image, { StaticImageData } from 'next/image';
 import PageTransition from '../components/ui/PageTransition';
+import ProjectModal from '../components/ui/ProjectModal';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 import projects, { Project } from '../constants/projects';
 
@@ -20,6 +21,8 @@ import hospitalerImg from '../assets/projects/hospitaler.png';
 const ProjectsPage = () => {
   const [filter, setFilter] = useState<string>('all');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const prefersReducedMotion =
     typeof window !== 'undefined' &&
     window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -32,6 +35,16 @@ const ProjectsPage = () => {
     4: perpsbotImg,
     5: stievebotImg,
     6: hospitalerImg,
+  };
+
+  const handleProjectDetails = (project: Project) => {
+    setSelectedProject(project);
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+    setSelectedProject(null);
   };
 
   const categories = [
@@ -234,6 +247,13 @@ const ProjectsPage = () => {
 
           {/* Action Buttons - Mobile Optimized */}
           <div className="flex items-center gap-2 pt-4 mt-2 border-t border-border">
+            <button
+              onClick={() => handleProjectDetails(project)}
+              className="flex items-center gap-1.5 px-3 py-2 text-xs sm:text-sm bg-accent hover:bg-accent/80 text-accent-foreground rounded-lg transition-colors flex-1 justify-center"
+            >
+              <Eye className="h-3.5 w-3.5" />
+              <span className="hidden xs:inline">View </span>Details
+            </button>
             {project.githubUrl && (
               <a
                 href={project.githubUrl}
@@ -241,7 +261,7 @@ const ProjectsPage = () => {
                 rel="noopener noreferrer"
                 className="flex items-center gap-1.5 px-3 py-2 text-xs sm:text-sm bg-secondary hover:bg-secondary/80 rounded-lg transition-colors flex-1 justify-center">
                 <Github className="h-3.5 w-3.5" />
-                <span className="hidden xs:inline">View </span>Code
+                <span className="hidden xs:inline">Code</span>
               </a>
             )}
             {project.liveUrl && (
@@ -325,6 +345,14 @@ const ProjectsPage = () => {
           </motion.div>
         </main>
       </div>
+
+      {/* Project Modal */}
+      <ProjectModal
+        project={selectedProject}
+        isOpen={isModalOpen}
+        onClose={handleCloseModal}
+        projectImage={selectedProject ? projectImages[selectedProject.id] : undefined}
+      />
     </PageTransition>
   );
 };

@@ -9,6 +9,8 @@ import RecentProjectsSection from './components/sections/RecentProjectsSection';
 import ContactSection from './components/sections/ContactSection';
 import OffGridSection from './components/sections/OffGridSection';
 import StructuredData from './components/StructuredData';
+import JoshChatbot from './components/JoshChatbot';
+import Footer from './components/ui/Footer';
 
 const HomePage = () => {
   return (
@@ -52,7 +54,13 @@ const HomePage = () => {
             </div>
           </div>
         </main>
+
+        {/* Footer */}
+        <Footer />
       </PageTransition>
+
+      {/* Josh's Digital Twin Chatbot */}
+      <JoshChatbot />
     </>
   );
 };

@@ -7,6 +7,7 @@ import Link from 'next/link';
 import Image, { StaticImageData } from 'next/image';
 import PageTransition from '../components/ui/PageTransition';
 import ProjectModal from '../components/ui/ProjectModal';
+import Footer from '../components/ui/Footer';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 import projects, { Project } from '../constants/projects';
 
@@ -344,6 +345,9 @@ const ProjectsPage = () => {
             </div>
           </motion.div>
         </main>
+        
+        {/* Footer */}
+        <Footer />
       </div>
 
       {/* Project Modal */}

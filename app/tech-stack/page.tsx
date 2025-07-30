@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import { ArrowLeft, Code } from 'lucide-react';
 import Link from 'next/link';
 import PageTransition from '../components/ui/PageTransition';
+import Footer from '../components/ui/Footer';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 import techStack from '../constants/tech-stack';
 
@@ -156,6 +157,9 @@ const TechStackPage = () => {
             </motion.div>
           </div>
         </main>
+
+        {/* Footer */}
+        <Footer />
       </div>
     </PageTransition>
   );

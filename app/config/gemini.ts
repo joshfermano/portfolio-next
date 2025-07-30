@@ -1,16 +1,24 @@
 import { GoogleGenAI } from '@google/genai';
 
-const apiKey = process.env.NEXT_PUBLIC_GEMINI_API_KEY;
+let ai: GoogleGenAI | null = null;
 
-if (!apiKey) {
-  throw new Error(
-    'NEXT_PUBLIC_GEMINI_API_KEY is not defined in environment variables'
-  );
+function getAI() {
+  if (!ai) {
+    const apiKey = process.env.NEXT_PUBLIC_GEMINI_API_KEY;
+    
+    if (!apiKey) {
+      throw new Error(
+        'NEXT_PUBLIC_GEMINI_API_KEY is not defined in environment variables'
+      );
+    }
+    
+    ai = new GoogleGenAI({
+      apiKey: apiKey,
+    });
+  }
+  
+  return ai;
 }
-
-const ai = new GoogleGenAI({
-  apiKey: apiKey,
-});
 
 export const joshPersonality = `You are a localized AI chatbot named "Josh Khovick Fermano"—a digital extension of myself.
 
@@ -150,13 +158,14 @@ IMPORTANT: Do NOT use markdown formatting like **bold** or *italic* in your resp
 
 export async function generateResponse(message: string): Promise<string> {
   try {
+    const aiInstance = getAI();
     const prompt = `${joshPersonality}
 
 User: ${message}
 
 Josh:`;
 
-    const response = await ai.models.generateContent({
+    const response = await aiInstance.models.generateContent({
       model: 'gemini-2.5-flash',
       contents: prompt,
     });

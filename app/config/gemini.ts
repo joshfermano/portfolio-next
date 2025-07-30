@@ -161,9 +161,12 @@ Josh:`;
       contents: prompt,
     });
 
-    const cleanText = response.text?.replace(/\*\*(.*?)\*\*/g, '$1').replace(/\*(.*?)\*/g, '$1') ?? 
+    const cleanText =
+      response.text
+        ?.replace(/\*\*(.*?)\*\*/g, '$1')
+        .replace(/\*(.*?)\*/g, '$1') ??
       "Bruh, my AI brain just lagged for a sec 😅 Hit me up again and let's keep the convo going!";
-    
+
     return cleanText;
   } catch (error) {
     console.error('Error generating response:', error);

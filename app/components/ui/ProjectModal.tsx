@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, Github, Eye, Calendar, Code, Layers } from 'lucide-react';
+import { X, Github, Eye, Code, Layers } from 'lucide-react';
 import Image, { StaticImageData } from 'next/image';
 import CustomButton from './CustomButton';
 import { Project } from '../../constants/projects';

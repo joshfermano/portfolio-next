@@ -2,7 +2,7 @@
 
 import React, { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { MessageCircle, X, Send, User, Bot, Loader2 } from 'lucide-react';
+import { X, Send, User, Loader2 } from 'lucide-react';
 import Image from 'next/image';
 import { generateResponse } from '../config/gemini';
 

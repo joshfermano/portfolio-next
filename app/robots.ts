@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: '/private/',
     },
-    sitemap: 'https://joshfermano.me/sitemap.xml',
+    sitemap: 'https://www.joshfermano.me/sitemap.xml',
   };
 }

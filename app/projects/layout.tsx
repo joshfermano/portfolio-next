@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description: 'Explore my portfolio of web applications, AI/ML projects, and mobile apps built with modern technologies like React, Next.js, TypeScript, and more.',
   keywords: 'Josh Fermano projects, web development projects, React projects, AI projects, portfolio, full stack projects',
   alternates: {
-    canonical: 'https://joshfermano.me/projects',
+    canonical: 'https://www.joshfermano.me/projects',
   },
   robots: {
     index: true,
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Projects | Josh Khovick Fermano',
     description: 'Explore my portfolio of web applications, AI/ML projects, and mobile apps built with modern technologies.',
-    url: 'https://joshfermano.me/projects',
+    url: 'https://www.joshfermano.me/projects',
     siteName: 'Josh Fermano Portfolio',
     type: 'website',
   },

@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description: 'Discover the technologies I work with including React, TypeScript, Next.js, Node.js, Python, AI/ML frameworks, and modern development tools.',
   keywords: 'Josh Fermano tech stack, React, TypeScript, Next.js, Node.js, Python, AI, machine learning, web development technologies',
   alternates: {
-    canonical: 'https://joshfermano.me/tech-stack',
+    canonical: 'https://www.joshfermano.me/tech-stack',
   },
   robots: {
     index: true,
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Tech Stack | Josh Khovick Fermano',
     description: 'Discover the technologies I work with including React, TypeScript, Next.js, Node.js, Python, and AI/ML frameworks.',
-    url: 'https://joshfermano.me/tech-stack',
+    url: 'https://www.joshfermano.me/tech-stack',
     siteName: 'Josh Fermano Portfolio',
     type: 'website',
   },

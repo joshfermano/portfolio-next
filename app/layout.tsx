@@ -23,7 +23,7 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://joshfermano.me'),
+  metadataBase: new URL('https://www.joshfermano.me'),
   title: {
     default: 'Josh Khovick Fermano | Full Stack Developer',
     template: '%s | Josh Khovick Fermano',
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   creator: 'Josh Khovick Fermano',
   publisher: 'Josh Khovick Fermano',
   alternates: {
-    canonical: 'https://joshfermano.me',
+    canonical: 'https://www.joshfermano.me',
   },
   robots: {
     index: true,
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     title: 'Josh Khovick Fermano | Full Stack Developer',
     description:
       'Portfolio of Josh Fermano, a Full Stack Developer specializing in React, Next.js, TypeScript, Express.js and more.',
-    url: 'https://joshfermano.me',
+    url: 'https://www.joshfermano.me',
     siteName: 'Josh Fermano Portfolio',
     type: 'website',
     locale: 'en_US',

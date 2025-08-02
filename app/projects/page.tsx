@@ -161,12 +161,125 @@ const ProjectsPage = () => {
   const ProjectCard = ({
     project,
     index,
+    viewMode,
   }: {
     project: Project;
     index: number;
+    viewMode: 'grid' | 'list';
   }) => {
     const { elementRef, isVisible } = useScrollAnimation({ threshold: 0.2 });
 
+    if (viewMode === 'list') {
+      return (
+        <motion.div
+          ref={elementRef}
+          initial={{ opacity: 0, y: prefersReducedMotion ? 0 : 40 }}
+          animate={{
+            opacity: isVisible ? 1 : 0,
+            y: isVisible ? 0 : prefersReducedMotion ? 0 : 40,
+          }}
+          transition={{
+            duration: prefersReducedMotion ? 0.2 : 0.6,
+            ease: [0.25, 0.46, 0.45, 0.94],
+            delay: index * 0.1,
+          }}
+          layout
+          className="group bg-card border border-border rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300">
+          <div className="flex flex-col sm:flex-row">
+            {/* Project Image - List View */}
+            <div className="relative overflow-hidden bg-secondary/30 aspect-[4/3] sm:aspect-video sm:w-80 sm:min-w-80">
+              {projectImages[project.id] ? (
+                <Image
+                  src={projectImages[project.id]}
+                  alt={project.title}
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  placeholder="blur"
+                />
+              ) : (
+                <div className="w-full h-full flex items-center justify-center">
+                  <FolderOpen className="h-12 w-12 text-muted-foreground" />
+                </div>
+              )}
+              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300" />
+
+              {/* Featured Badge */}
+              {project.featured && (
+                <div className="absolute top-3 left-3">
+                  <span className="px-2 py-1 text-xs font-medium bg-primary text-primary-foreground rounded-full">
+                    Featured
+                  </span>
+                </div>
+              )}
+
+              {/* Category Badge */}
+              <div className="absolute top-3 right-3">
+                <span className="px-2 py-1 text-xs font-medium bg-background/80 backdrop-blur-sm text-foreground rounded-full capitalize">
+                  {project.category || 'Other'}
+                </span>
+              </div>
+            </div>
+
+            {/* Project Content - List View */}
+            <div className="p-4 sm:p-6 flex flex-col flex-1">
+              <div className="flex-1 space-y-4">
+                <h3 className="font-heading text-xl sm:text-2xl font-bold text-card-foreground leading-tight group-hover:text-primary transition-colors">
+                  {project.title}
+                </h3>
+
+                <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
+                  {project.longDescription || project.description}
+                </p>
+
+                {/* Tech Stack - List View */}
+                <div className="flex flex-wrap gap-2">
+                  {project.techStack.map((tech: string, techIndex: number) => (
+                    <span
+                      key={techIndex}
+                      className="tech-badge px-3 py-1.5 bg-secondary text-secondary-foreground rounded-md text-sm">
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              {/* Action Buttons - List View */}
+              <div className="flex items-center gap-3 pt-4 mt-4 border-t border-border">
+                <button
+                  onClick={() => handleProjectDetails(project)}
+                  className="flex items-center gap-2 px-4 py-2 text-sm bg-accent hover:bg-accent/80 text-accent-foreground rounded-lg transition-colors"
+                >
+                  <Eye className="h-4 w-4" />
+                  View Details
+                </button>
+                {project.githubUrl && (
+                  <a
+                    href={project.githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 px-4 py-2 text-sm bg-secondary hover:bg-secondary/80 rounded-lg transition-colors">
+                    <Github className="h-4 w-4" />
+                    Code
+                  </a>
+                )}
+                {project.liveUrl && (
+                  <a
+                    href={project.liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 px-4 py-2 text-sm bg-primary text-primary-foreground hover:bg-primary/90 rounded-lg transition-colors">
+                    <Eye className="h-4 w-4" />
+                    Live Demo
+                  </a>
+                )}
+              </div>
+            </div>
+          </div>
+        </motion.div>
+      );
+    }
+
+    // Grid view (default)
     return (
       <motion.div
         ref={elementRef}
@@ -287,7 +400,7 @@ const ProjectsPage = () => {
         <main className="max-w-6xl mx-auto px-3 sm:px-4 py-6 sm:py-8">
           <HeaderSection />
 
-          {/* Projects Grid */}
+          {/* Projects Grid/List */}
           <AnimatePresence mode="wait">
             <motion.div
               key={filter}
@@ -295,9 +408,12 @@ const ProjectsPage = () => {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.3 }}
-              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+              className={viewMode === 'grid' 
+                ? "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6"
+                : "flex flex-col gap-4 sm:gap-6"
+              }>
               {filteredProjects.map((project, index) => (
-                <ProjectCard key={project.id} project={project} index={index} />
+                <ProjectCard key={project.id} project={project} index={index} viewMode={viewMode} />
               ))}
             </motion.div>
           </AnimatePresence>

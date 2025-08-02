@@ -43,9 +43,9 @@ const RecentProjectsSection = () => {
         ease: [0.25, 0.46, 0.45, 0.94],
         delay: 0.35
       }}
-      className="p-4 border border-border rounded-lg shadow-sm hover:shadow-md transition-all duration-300 bg-card"
+      className="p-3 border border-border rounded-lg shadow-sm hover:shadow-md transition-all duration-300 bg-card"
     >
-      <div className="flex flex-col space-y-4">
+      <div className="flex flex-col space-y-3">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
             <FolderOpen className="h-5 w-5 text-primary" />
@@ -64,15 +64,15 @@ const RecentProjectsSection = () => {
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="flex flex-col gap-3"
+          className="flex flex-col gap-2"
         >
           {featuredProjects.slice(0, 2).map((project) => (
             <motion.div
               key={project.id}
               variants={itemVariants}
-              className="border border-border p-3 rounded-lg bg-secondary/30 hover:bg-secondary/50 transition-all duration-200 group"
+              className="border border-border p-2 rounded-lg bg-secondary/30 hover:bg-secondary/50 transition-all duration-200 group"
             >
-              <div className="flex flex-col space-y-2 h-full">
+              <div className="flex flex-col space-y-1 h-full">
                 <div className="flex items-start justify-between">
                   <h3 className="font-bold text-sm text-card-foreground line-clamp-1 group-hover:text-primary transition-colors">
                     {project.title}

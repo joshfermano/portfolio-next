@@ -43,7 +43,7 @@ export const personalInfo: PersonalInfo = {
       role: 'Software Engineer',
       company: 'Mangoe',
       location: 'Sydney, Australia (Remote)',
-      year: '2025-Present',
+      year: '2025',
       current: true,
     },
     {
@@ -67,7 +67,7 @@ export const personalInfo: PersonalInfo = {
     facebook: 'https://www.facebook.com/joshkhovick/',
   },
   interests: [
-    "Beyond coding, I find balance through basketball's strategic gameplay and combat sports' discipline, both teaching me patience and problem-solving under pressure. My **Christian faith in Jesus Christ** is the cornerstone of my life, guiding my values, work ethic, and purpose to use technology for positive impact. Whether I'm on the court, in training, or building applications, my faith reminds me that every skill is a gift to be stewarded responsibly, helping me stay grounded while striving for excellence in all I do."
+    "Beyond coding, I find balance through basketball's strategic gameplay and combat sports' discipline, both teaching me patience and problem-solving under pressure. My **Christian faith in Jesus Christ** is the cornerstone of my life, guiding my values, work ethic, and purpose to use technology for positive impact. Whether I'm on the court, in training, or building applications, my faith reminds me that every skill is a gift to be stewarded responsibly, helping me stay grounded while striving for excellence in all I do.",
   ],
 };
 

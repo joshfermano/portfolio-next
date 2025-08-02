@@ -59,7 +59,7 @@ const ContactSection = () => {
         ease: [0.25, 0.46, 0.45, 0.94],
         delay: 0.2,
       }}
-      className="h-full p-4 border border-border rounded-lg shadow-sm hover:shadow-md transition-all duration-300 bg-card flex flex-col">
+      className="p-3 border border-border rounded-lg shadow-sm hover:shadow-md transition-all duration-300 bg-card">
       <div className="flex flex-col space-y-3">
         <div className="flex items-center gap-2">
           <Contact className="h-5 w-5 text-primary" />
@@ -97,7 +97,7 @@ const ContactSection = () => {
               variants={containerVariants}
               initial="hidden"
               animate="visible"
-              className="flex flex-col gap-2">
+              className="flex flex-row gap-3 justify-center">
               {Object.entries(personalInfo.socialLinks).map(
                 ([platform, url]) => {
                   const IconComponent =
@@ -111,9 +111,9 @@ const ContactSection = () => {
                         onClick={() => window.open(url, '_blank')}
                         variant="secondary"
                         size="sm"
-                        className="w-full">
+                        className="w-10 h-10 p-0 flex items-center justify-center"
+                        title={platformName}>
                         <IconComponent className="h-4 w-4" />
-                        {platformName}
                       </CustomButton>
                     </motion.div>
                   );

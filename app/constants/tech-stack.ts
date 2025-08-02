@@ -49,6 +49,7 @@ const techStack: TechStackCategory = {
     'OpenAI API',
     'Google Gemini API',
     'Anthropic',
+    'Ollama',
     'OpenCV',
     'Roboflow',
     'Hugging Face',
@@ -93,8 +94,12 @@ export const getAllTechnologies = (): string[] => {
   return Object.values(techStack).flat();
 };
 
-export const getTechnologiesByCategory = (category: keyof TechStackCategory): string[] => {
+export const getTechnologiesByCategory = (
+  category: keyof TechStackCategory
+): string[] => {
   return techStack[category] || [];
 };
 
-export const techStackCategories = Object.keys(techStack) as (keyof TechStackCategory)[];
+export const techStackCategories = Object.keys(
+  techStack
+) as (keyof TechStackCategory)[];

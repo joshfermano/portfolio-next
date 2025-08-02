@@ -28,7 +28,7 @@ const projects: Project[] = [
       'MongoDB',
       'Supabase',
     ],
-    githubUrl: 'https://github.com/joshfermano/Open_Space',
+    githubUrl: 'https://github.com/joshfermano/OpenSpace_v2',
     liveUrl: 'https://openspace-reserve.vercel.app',
     featured: true,
     category: 'web',
@@ -77,7 +77,7 @@ const projects: Project[] = [
     longDescription:
       'Pitaka is a comprehensive mobile banking application designed to provide users with a secure and intuitive financial management experience. Built with React Native and modern mobile development practices, it features real-time transaction processing, secure authentication, digital wallet management, and comprehensive financial analytics. The app prioritizes user experience with smooth animations and responsive design.',
     techStack: ['React Native', 'Nativewind', 'Expo', 'Express', 'MongoDB'],
-    githubUrl: 'https://github.com/joshfermano/pitaka-mobile-banking',
+    githubUrl: 'https://github.com/joshfermano/Pitaka',
     liveUrl: null,
     featured: true,
     category: 'mobile',

@@ -19,38 +19,42 @@ const HomePage = () => {
       <ScrollNavbar />
 
       <PageTransition>
-        <main className="max-w-5xl mx-auto px-4 py-6 space-y-6">
+        <main className="max-w-5xl mx-auto px-4 py-4 space-y-6">
           {/* Hero Section - Full Width */}
           <HeroSection />
 
-          {/* About Section - Full Width */}
-          <AboutSection />
-
-          {/* Two Column Layout: Experience + Tech Stack & Recent Projects */}
-          <div className="grid grid-cols-1 lg:grid-cols-4 gap-4">
-            {/* Experience Section */}
-            <div className="lg:col-span-1 space-y-4 flex flex-col">
-              <ExperienceSection />
-              <div className="flex-1">
-                <ContactSection />
-              </div>
+          {/* First Row: About (Left) | Experience (Right) */}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 items-start">
+            {/* Left Column: About */}
+            <div className="lg:col-span-2">
+              <AboutSection />
             </div>
 
-            {/* Tech Stack and Recent Projects */}
-            <div className="lg:col-span-3 space-y-4 flex flex-col">
-              {/* Tech Stack and Recent Projects Side by Side */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {/* Tech Stack */}
-                <TechStackSection />
+            {/* Right Column: Experience */}
+            <div className="lg:col-span-1">
+              <ExperienceSection />
+            </div>
+          </div>
 
-                {/* Recent Projects */}
-                <RecentProjectsSection />
-              </div>
+          {/* Second Row: Tech Stack + Featured Projects */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 items-start">
+            {/* Tech Stack */}
+            <TechStackSection />
 
-              {/* Beyond Coding Section - Full Width under Tech Stack & Projects */}
-              <div className="flex-1">
-                <OffGridSection />
-              </div>
+            {/* Featured Projects */}
+            <RecentProjectsSection />
+          </div>
+
+          {/* Third Row: Beyond Coding + Contact Section */}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 items-start">
+            {/* Beyond Coding - Takes up 2/3 of the space */}
+            <div className="lg:col-span-2">
+              <OffGridSection />
+            </div>
+
+            {/* Contact Section - Takes up 1/3 of the space */}
+            <div className="lg:col-span-1">
+              <ContactSection />
             </div>
           </div>
         </main>

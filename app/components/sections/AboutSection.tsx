@@ -22,15 +22,15 @@ const AboutSection = () => {
         duration: prefersReducedMotion ? 0.2 : 0.6,
         ease: [0.25, 0.46, 0.45, 0.94]
       }}
-      className="p-4 border border-border rounded-lg shadow-sm hover:shadow-md transition-all duration-300 bg-card"
+      className="p-3 border border-border rounded-lg shadow-sm hover:shadow-md transition-all duration-300 bg-card"
     >
-      <div className="flex flex-col space-y-3">
+      <div className="flex flex-col space-y-2">
         <div className="flex items-center gap-2">
           <Info className="h-5 w-5 text-primary" />
           <h2 className="text-xl font-bold text-card-foreground">About</h2>
         </div>
         
-        <div className="flex flex-col space-y-4 text-sm text-card-foreground">
+        <div className="flex flex-col space-y-2 text-sm text-card-foreground">
           {personalInfo.bio.map((paragraph, index) => {
             // Function to render markdown bold text
             const renderMarkdown = (text: string) => {

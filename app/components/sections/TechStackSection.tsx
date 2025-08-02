@@ -45,7 +45,7 @@ const TechStackSection = () => {
         ease: [0.25, 0.46, 0.45, 0.94],
         delay: 0.3,
       }}
-      className="p-4 border border-border rounded-lg shadow-sm hover:shadow-md transition-all duration-300 bg-card">
+      className="h-full p-4 border border-border rounded-lg shadow-sm hover:shadow-md transition-all duration-300 bg-card flex flex-col">
       <div className="flex flex-col space-y-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
@@ -62,16 +62,16 @@ const TechStackSection = () => {
           </Link>
         </div>
 
-        <div className="flex flex-col space-y-3">
+        <div className="flex flex-col space-y-4">
           {/* Frontend */}
-          <div className="flex flex-col space-y-3">
+          <div className="flex flex-col space-y-2">
             <h3 className="text-sm font-bold text-card-foreground">Frontend</h3>
             <motion.div
               variants={containerVariants}
               initial="hidden"
               animate="visible"
               className="flex flex-wrap gap-2">
-              {techStack.frontend.slice(0, 6).map((tech, index) => (
+              {techStack.frontend.slice(0, 9).map((tech, index) => (
                 <motion.span
                   key={index}
                   variants={itemVariants}
@@ -83,14 +83,14 @@ const TechStackSection = () => {
           </div>
 
           {/* Backend */}
-          <div className="flex flex-col space-y-3">
+          <div className="flex flex-col space-y-2">
             <h3 className="text-sm font-bold text-card-foreground">Backend</h3>
             <motion.div
               variants={containerVariants}
               initial="hidden"
               animate="visible"
               className="flex flex-wrap gap-2">
-              {techStack.backend.slice(0, 6).map((tech, index) => (
+              {techStack.backend.slice(0, 11).map((tech, index) => (
                 <motion.span
                   key={index}
                   variants={itemVariants}
@@ -102,14 +102,14 @@ const TechStackSection = () => {
           </div>
 
           {/* AI/ML */}
-          <div className="flex flex-col space-y-3">
+          <div className="flex flex-col space-y-2">
             <h3 className="text-sm font-bold text-card-foreground">AI/ML</h3>
             <motion.div
               variants={containerVariants}
               initial="hidden"
               animate="visible"
               className="flex flex-wrap gap-2">
-              {techStack.aiml.slice(0, 8).map((tech, index) => (
+              {techStack.aiml.slice(0, 9).map((tech, index) => (
                 <motion.span
                   key={index}
                   variants={itemVariants}

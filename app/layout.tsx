@@ -24,13 +24,31 @@ const outfit = Outfit({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://joshfermano.me'),
-  title: 'Josh Khovick Fermano | Full Stack Developer',
+  title: {
+    default: 'Josh Khovick Fermano | Full Stack Developer',
+    template: '%s | Josh Khovick Fermano',
+  },
   description:
     'Portfolio of Josh Fermano, a Full Stack Developer specializing in React, Next.js, TypeScript, Express.js and more.',
   keywords:
-    'Josh Khovick Fermano, web development, full stack, React, TypeScript, Express.js',
+    'Josh Khovick Fermano, web development, full stack, React, TypeScript, Express.js, portfolio, software engineer',
   authors: [{ name: 'Josh Khovick Fermano' }],
   creator: 'Josh Khovick Fermano',
+  publisher: 'Josh Khovick Fermano',
+  alternates: {
+    canonical: 'https://joshfermano.me',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
   icons: {
     icon: '/profile-icon.png',
     shortcut: '/profile-icon.png',
@@ -43,7 +61,15 @@ export const metadata: Metadata = {
     url: 'https://joshfermano.me',
     siteName: 'Josh Fermano Portfolio',
     type: 'website',
-    images: ['/profile-icon.png'],
+    locale: 'en_US',
+    images: [
+      {
+        url: '/profile-icon.png',
+        width: 1200,
+        height: 630,
+        alt: 'Josh Khovick Fermano - Full Stack Developer',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
@@ -51,6 +77,7 @@ export const metadata: Metadata = {
     description:
       'Portfolio of Josh Fermano, a Full Stack Developer specializing in React, Next.js, TypeScript, Express.js and more.',
     images: ['/profile-icon.png'],
+    creator: '@joshfermano', // Replace with your actual Twitter handle
   },
 };
 

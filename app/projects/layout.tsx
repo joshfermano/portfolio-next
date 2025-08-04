@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Projects',
   description: 'Explore my portfolio of web applications, AI/ML projects, and mobile apps built with modern technologies like React, Next.js, TypeScript, and more.',
-  keywords: 'Josh Fermano projects, web development projects, React projects, AI projects, portfolio, full stack projects',
+  keywords: 'Josh Khovick Fermano projects, web development projects, React projects, AI projects, portfolio, full stack projects',
   alternates: {
     canonical: 'https://www.joshfermano.me/projects',
   },
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     title: 'Projects | Josh Khovick Fermano',
     description: 'Explore my portfolio of web applications, AI/ML projects, and mobile apps built with modern technologies.',
     url: 'https://www.joshfermano.me/projects',
-    siteName: 'Josh Fermano Portfolio',
+    siteName: 'Josh Khovick Fermano Portfolio',
     type: 'website',
   },
   twitter: {

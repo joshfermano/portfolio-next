@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     template: '%s | Josh Khovick Fermano',
   },
   description:
-    'Portfolio of Josh Fermano, a Full Stack Developer specializing in React, Next.js, TypeScript, Express.js and more.',
+    'Portfolio of Josh Khovick Fermano, a Full Stack Developer specializing in React, Next.js, TypeScript, Express.js and more.',
   keywords:
     'Josh Khovick Fermano, web development, full stack, React, TypeScript, Express.js, portfolio, software engineer',
   authors: [{ name: 'Josh Khovick Fermano' }],
@@ -57,9 +57,9 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Josh Khovick Fermano | Full Stack Developer',
     description:
-      'Portfolio of Josh Fermano, a Full Stack Developer specializing in React, Next.js, TypeScript, Express.js and more.',
+      'Portfolio of Josh Khovick Fermano, a Full Stack Developer specializing in React, Next.js, TypeScript, Express.js and more.',
     url: 'https://www.joshfermano.me',
-    siteName: 'Josh Fermano Portfolio',
+    siteName: 'Josh Khovick Fermano Portfolio',
     type: 'website',
     locale: 'en_US',
     images: [
@@ -75,7 +75,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Josh Khovick Fermano | Full Stack Developer',
     description:
-      'Portfolio of Josh Fermano, a Full Stack Developer specializing in React, Next.js, TypeScript, Express.js and more.',
+      'Portfolio of Josh Khovick Fermano, a Full Stack Developer specializing in React, Next.js, TypeScript, Express.js and more.',
     images: ['/profile-icon.png'],
     creator: '@joshfermano', // Replace with your actual Twitter handle
   },

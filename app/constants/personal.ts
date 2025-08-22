@@ -29,7 +29,7 @@ export interface PersonalInfo {
 
 export const personalInfo: PersonalInfo = {
   name: 'Josh Khovick Fermano',
-  title: 'Freelance Software Engineer & Computer Science Student',
+  title: 'Full Stack Developer Specializing in AI & Computer Science Student',
   bio: [
     "Hello, I'm **Josh Khovick Fermano**, a **4th year Computer Science student** at **Technological University of the Philippines Manila** and currently working remotely as a **Freelance Software Engineer** at **Mangoe** in **Sydney, Australia**.",
     'With a passion for **full-stack development**, I specialize in building scalable web and mobile applications using modern technologies including **React**, **TypeScript**, **Next.js**, **React Native**, and **Tailwind CSS**. My expertise extends to database management with **SQL and NoSQL systems**, **cloud storage solutions**, and **API integration**.',

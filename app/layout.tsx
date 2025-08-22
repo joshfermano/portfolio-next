@@ -25,13 +25,13 @@ const outfit = Outfit({
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.joshfermano.me'),
   title: {
-    default: 'Josh Khovick Fermano | Full Stack Developer',
+    default: 'Josh Khovick Fermano | Full Stack Developer Specializing in AI',
     template: '%s | Josh Khovick Fermano',
   },
   description:
-    'Portfolio of Josh Khovick Fermano, a Full Stack Developer specializing in React, Next.js, TypeScript, Express.js and more.',
+    'Portfolio of Josh Khovick Fermano, a Full Stack Developer Specializing in AI, Computer Science Student, and Freelance Software Engineer.',
   keywords:
-    'Josh Khovick Fermano, web development, full stack, React, TypeScript, Express.js, portfolio, software engineer',
+    'Josh Khovick Fermano, web development, full stack, AI development, React, TypeScript, Express.js, portfolio, software engineer, computer science student',
   authors: [{ name: 'Josh Khovick Fermano' }],
   creator: 'Josh Khovick Fermano',
   publisher: 'Josh Khovick Fermano',
@@ -50,33 +50,33 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: '/profile-icon.png',
-    shortcut: '/profile-icon.png',
-    apple: '/profile-icon.png',
+    icon: '/icon.png',
+    shortcut: '/icon.png',
+    apple: '/icon.png',
   },
   openGraph: {
-    title: 'Josh Khovick Fermano | Full Stack Developer',
+    title: 'Josh Khovick Fermano | Full Stack Developer Specializing in AI',
     description:
-      'Portfolio of Josh Khovick Fermano, a Full Stack Developer specializing in React, Next.js, TypeScript, Express.js and more.',
+      'Portfolio of Josh Khovick Fermano, a Full Stack Developer Specializing in AI, Computer Science Student, and Freelance Software Engineer.',
     url: 'https://www.joshfermano.me',
     siteName: 'Josh Khovick Fermano Portfolio',
     type: 'website',
     locale: 'en_US',
     images: [
       {
-        url: '/profile-icon.png',
+        url: '/icon.png',
         width: 1200,
         height: 630,
-        alt: 'Josh Khovick Fermano - Full Stack Developer',
+        alt: 'Josh Khovick Fermano - Full Stack Developer Specializing in AI',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Josh Khovick Fermano | Full Stack Developer',
+    title: 'Josh Khovick Fermano | Full Stack Developer Specializing in AI',
     description:
-      'Portfolio of Josh Khovick Fermano, a Full Stack Developer specializing in React, Next.js, TypeScript, Express.js and more.',
-    images: ['/profile-icon.png'],
+      'Portfolio of Josh Khovick Fermano, a Full Stack Developer Specializing in AI, Computer Science Student, and Freelance Software Engineer.',
+    images: ['/icon.png'],
     creator: '@joshfermano', // Replace with your actual Twitter handle
   },
 };

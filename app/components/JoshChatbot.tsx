@@ -27,7 +27,7 @@ const JoshChatbot = () => {
   const [messages, setMessages] = useState<Message[]>([
     {
       id: '1',
-      text: "Yo! I'm Josh Khovick Fermano 👋 Your friendly neighborhood Full Stack Dev from the Philippines! Ask me anything about my life, coding journey, or whatever's on your mind. Let's vibe! 🚀",
+      text: "Yo! I'm Josh Khovick Fermano 👋 Freelance Software Engineer focused on AI integration. Ask me anything about my life, work, or journey. Let's vibe! 🚀",
       isUser: false,
       timestamp: new Date(),
     },
@@ -166,7 +166,9 @@ const JoshChatbot = () => {
                   <h3 className="font-medium text-xs sm:text-sm">
                     Josh Khovick Fermano
                   </h3>
-                  <p className="text-xs opacity-80 hidden sm:block">Digital Twin 🚀</p>
+                  <p className="text-xs opacity-80 hidden sm:block">
+                    Digital Twin 🚀
+                  </p>
                 </div>
               </div>
               <button

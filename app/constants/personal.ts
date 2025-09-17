@@ -31,20 +31,20 @@ export const personalInfo: PersonalInfo = {
   name: 'Josh Khovick Fermano',
   title: 'Full Stack Developer Specializing in AI & Computer Science Student',
   bio: [
-    "Hello, I'm **Josh Khovick Fermano**, a **4th year Computer Science student** at **Technological University of the Philippines Manila** and currently working remotely as a **Freelance Software Engineer** at **Mangoe** in **Sydney, Australia**.",
+    "Hello, I'm **Josh Khovick Fermano**, a **4th year Computer Science student** at **Technological University of the Philippines Manila** and a **freelance Software Engineer** focused on **AI integration**.",
     'With a passion for **full-stack development**, I specialize in building scalable web and mobile applications using modern technologies including **React**, **TypeScript**, **Next.js**, **React Native**, and **Tailwind CSS**. My expertise extends to database management with **SQL and NoSQL systems**, **cloud storage solutions**, and **API integration**.',
     'I thrive in **collaborative environments** where I can leverage my **problem-solving skills** and technical expertise to deliver high-quality solutions. My experience focuses on creating **responsive, performant applications** with **clean, maintainable code** and exceptional user experiences.',
-    'Currently contributing to innovative projects at **Mangoe** as a **freelancer** while remaining **open to new opportunities**. I bring a strong foundation in **software engineering principles**, **agile methodologies**, and a keen eye for **performance optimization** and modern development practices.',
+    'Currently focusing on **freelance projects** in **AI integration** and **full-stack development**, while remaining **open to new opportunities**. I bring a strong foundation in **software engineering principles**, **agile methodologies**, and a keen eye for **performance optimization** and modern development practices.',
   ],
-  currentRole: 'Freelance Software Engineer',
-  currentCompany: 'Mangoe',
+  currentRole: 'Freelance Software Engineer (AI Integration)',
+  currentCompany: 'Self-employed',
   experience: [
     {
-      role: 'Freelance Software Engineer',
+      role: 'AI Software Engineer',
       company: 'Mangoe',
       location: 'Sydney, Australia (Remote)',
       year: '2025',
-      current: true,
+      current: false,
     },
     {
       role: 'Innovations Strategy Lead',

@@ -12,5 +12,13 @@
       "Bash(cd:*)"
     ],
     "deny": []
-  }
+  },
+  "enabledMcpjsonServers": [
+    "filesystem",
+    "github",
+    "memory",
+    "sequential-thinking",
+    "shadcn"
+  ],
+  "enableAllProjectMcpServers": true
 }

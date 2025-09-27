@@ -1,5 +1,9 @@
 {
   "mcpServers": {
+    "shadcn": {
+      "command": "npx",
+      "args": ["shadcn@latest", "mcp"]
+    },
     "filesystem": {
       "command": "npx",
       "args": ["@modelcontextprotocol/server-filesystem"]
@@ -11,23 +15,13 @@
         "GITHUB_PERSONAL_ACCESS_TOKEN": ""
       }
     },
-
-    "shadcn": {
+    "memory": {
       "command": "npx",
-      "args": ["shadcn@latest", "mcp"]
+      "args": ["@modelcontextprotocol/server-memory"]
+    },
+    "sequential-thinking": {
+      "command": "npx",
+      "args": ["@modelcontextprotocol/server-sequential-thinking"]
     }
-  },
-
-  "memory": {
-    "command": "npx",
-    "args": ["@modelcontextprotocol/server-memory"]
-  },
-  "sequential-thinking": {
-    "command": "npx",
-    "args": ["@modelcontextprotocol/server-sequential-thinking"]
-  },
-  "shadcn": {
-    "command": "npx",
-    "args": ["shadcn@latest", "mcp"]
   }
 }
